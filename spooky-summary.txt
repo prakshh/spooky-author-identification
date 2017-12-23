@@ -1,0 +1,57 @@
+Predictions
+Code
+Summary
+Approach
+Challenges
+Clear understanding
+
+
+
+At first, my guess will be that I’m going to count how often each author uses every word in the data. Then, if the test sentence has words that I've seen one author use a lot more than the others, I will guess that that person is probably the author.
+Suppose following below is a few collection of written texts:
+First Author: "With me, every once in a while, spooky stuff happens while creating any strange piece of art."
+Author two: "We were so amazed to see a magnificent cake at that restaurant. It looked fabulous."
+Now let's say that I have to find out which author wrote the following below:
+??? Author: "Imagine how strange and spooky could that be!"
+Just looking at it, it seems more likely that the sentence is written by the First Author. First Author says both "spooky" and "strange" a lot, while Second Author does not (at least, based on the train data). Since we see both "spooky" and "strange" in our test sentence, it seems more likely that it was written by First Author than Second Author--even though the test sentence does have the word "a" in it, which we have seen Second Author use too.
+
+
+
+
+
+It is possible to convert the intuition into code.
+For this, I'm going to be using the Natural Language Toolkit, also called the "NLTK". It's an open-source Python library for analyzing language data.
+
+Let's look at the “word frequency” for each of the authors in our dataset. 
+With the help of NLP applications, counting will be possible regarding how often certain words are used, i.e.,  "word frequency". 
+
+Searching of Writer’s-own-writing-style-related words - 
+To look at how often each writer uses specific words, (say if) since this is a Halloween competition, searching words like "fear", "scream" and "blood", will do some meaningful job.
+
+Word frequency is helpful in guessing regarding a sentence is written by which author.
+As far as I know, different people tend to use different words more or less often. I have a friend who is very much fond of “Oh really?”, “Whatever” and “I’m impressed”. So considering this concept, If I’m not sure who said something but it has a lot of words one person uses a lot in it, then I might guess that they were the one who wrote it.
+I have used this general principle to guess who might have been more likely to write the sentence "It was a dark and stormy night."
+So based on what I have seen in the data, it looks like among the three authors, H.P. Lovecraft was the most likely to write the sentence "It was a dark and stormy night".
+
+
+
+
+
+
+
+
+By taking the ideas explained in Prediction section and Approach section, it can be scaled up into a complete machine learning pipeline, and add some basic feature engineering, which are yet to be explored “more”.
+There are also some more advanced methods of importing, namely, 
+pandas for data manipulation, 
+spaCy for text processing, or  
+scikit-learn for machine learning
+
+Also, one more advanced way is : Stylometry (identifying the authors by sentence structure)
+Stylometry  can be used instead of classifying the texts. Following are the available features for such kind of analysis
+Lexical features: like Vocabulary richness and word-length distributions
+Syntactic features: like function words, punctuation, etc.
+Structural features: Structural features targets the actual composition of the text discussing its organization and layout. (not applicable in short extracts)
+Content-specific features: based on analysis of essential keywords and phrases on specific topics like in scientific publication. 
+Idiosyncratic features: Individual usage anomalies like misspellings and grammatical mistakes are taken into consideration
+
+Last but not the least, Kaggle.com and the contributors there who shares their ideas about a particular problem, are of great help in understanding the concepts. And I prefer to look forward in advanced methods of a particular problem.
